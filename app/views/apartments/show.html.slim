@@ -1,0 +1,39 @@
+p#notice = notice
+
+p
+  strong Price:
+  = @apartment.price
+p
+  strong Common expenses:
+  = @apartment.common_expenses
+p
+  strong Total price:
+  = @apartment.total_price
+p
+  strong Built square meters:
+  = @apartment.built_square_meters
+p
+  strong Terrace square meters:
+  = @apartment.terrace_square_meters
+p
+  strong Bedroom count:
+  = @apartment.bedroom_count
+p
+  strong Bathroom count:
+  = @apartment.bathroom_count
+p
+  strong Near:
+  = @apartment.near
+p
+  strong Comment:
+  = @apartment.comment
+p
+  strong Contact status:
+  = @apartment.contact_status
+p
+  strong Link:
+  = @apartment.link
+
+=> link_to 'Edit', edit_apartment_path(@apartment)
+'|
+=< link_to 'Back', apartments_path

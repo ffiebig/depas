@@ -1,19 +1,17 @@
-= simple_form_for(@apartment) do |f|
+= simple_form_for(@apartment, html: { class: 'vertical-form' }) do |f|
   = f.error_notification
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
 
-  .form-inputs
-    = f.input :price
-    = f.input :common_expenses
-    = f.input :total_price
-    = f.input :built_square_meters
-    = f.input :terrace_square_meters
-    = f.input :bedroom_count
-    = f.input :bathroom_count
-    = f.input :near
-    = f.input :comment
-    = f.input :contact_status
-    = f.input :link
+  = f.input :price
+  = f.input :common_expenses
+  = f.input :built_square_meters
+  = f.input :terrace_square_meters
+  = f.input :bedroom_count
+  = f.input :bathroom_count
+  = f.input :near
+  = f.input :comment
+  = f.input :contact_status
+  = f.input :link
 
   .form-actions
     = f.button :submit

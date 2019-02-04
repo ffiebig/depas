@@ -12,6 +12,7 @@ table.table.table-condensed.table-striped
       th Bathroom count
       th Near
       th Comment
+      th Contact Information
       th Contact status
       th Link
       th
@@ -31,6 +32,7 @@ table.table.table-condensed.table-striped
         td = apartment.bathroom_count
         td = apartment.near.truncate(truncate_size)
         td = apartment.comment.truncate(truncate_size)
+        td = apartment.contact_information.try(:truncate, truncate_size)
         td = apartment.contact_status.truncate(truncate_size)
         td = link_to apartment.link.truncate(truncate_size), apartment.link, target: 'blank'
         td = link_to fa_icon('eye'), apartment
